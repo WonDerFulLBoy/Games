@@ -1,0 +1,395 @@
+import java.awt.*;
+
+import javax.swing.*;
+
+import java.awt.event.*;
+
+public class Pazel extends JFrame implements ActionListener {
+	JButton b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, b11, b12, b13, b14, b15,
+			b16, next;
+boolean flg;
+	Pazel() {
+		super("");
+		b1 = new JButton("1");
+		b2 = new JButton(" ");
+		b3 = new JButton("3");
+		b4 = new JButton("4");
+		b5 = new JButton("5");
+		b6 = new JButton("6");
+		b7 = new JButton("7");
+		b8 = new JButton("8");
+		b9 = new JButton("9");
+		b10 = new JButton("10");
+		b11 = new JButton("11");
+		b12 = new JButton("12");
+		b13 = new JButton("13");
+		b14 = new JButton("14");
+		b15 = new JButton("15");
+		b16 = new JButton("2 ");
+		next = new JButton("Next");
+
+		b1.setBounds(10, 30, 50, 40);
+		b2.setBounds(70, 30, 50, 40);
+		b3.setBounds(130, 30, 50, 40);
+		b4.setBounds(190, 30, 50, 40);
+		b5.setBounds(10, 80, 50, 40);
+		b6.setBounds(70, 80, 50, 40);
+		b7.setBounds(130, 80, 50, 40);
+		b8.setBounds(190, 80, 50, 40);
+		b9.setBounds(10, 130, 50, 40);
+		b10.setBounds(70, 130, 50, 40);
+		b11.setBounds(130, 130, 50, 40);
+		b12.setBounds(190, 130, 50, 40);
+		b13.setBounds(10, 180, 50, 40);
+		b14.setBounds(70, 180, 50, 40);
+		b15.setBounds(130, 180, 50, 40);
+		b16.setBounds(190, 180, 50, 40);
+
+		next.setBounds(10, 230, 150, 30);
+
+		add(b1);
+		add(b2);
+		add(b3);
+		add(b4);
+		add(b5);
+		add(b6);
+		add(b7);
+		add(b8);
+		add(b9);
+		add(b10);
+		add(b11);
+		add(b12);
+		add(b13);
+		add(b14);
+		add(b15);
+		add(b16);
+		add(next);
+		b1.addActionListener(this);
+		b2.addActionListener(this);
+		b3.addActionListener(this);
+		b4.addActionListener(this);
+		b5.addActionListener(this);
+		b6.addActionListener(this);
+		b7.addActionListener(this);
+		b8.addActionListener(this);
+		b9.addActionListener(this);
+		b10.addActionListener(this);
+		b11.addActionListener(this);
+		b12.addActionListener(this);
+		b13.addActionListener(this);
+		b14.addActionListener(this);
+		b15.addActionListener(this);
+		b16.addActionListener(this);
+		next.addActionListener(this);
+
+		b1.setBackground(Color.pink);
+		b1.setForeground(Color.black);
+		b2.setBackground(Color.pink);
+		b2.setForeground(Color.black);
+		b3.setBackground(Color.pink);
+		b3.setForeground(Color.black);
+		b4.setBackground(Color.pink);
+		b4.setForeground(Color.black);
+		b5.setBackground(Color.pink);
+		b5.setForeground(Color.black);
+		b6.setBackground(Color.red);
+		b6.setForeground(Color.black);
+		b7.setBackground(Color.green);
+		b7.setForeground(Color.black);
+		b8.setBackground(Color.pink);
+		b8.setForeground(Color.black);
+		b9.setBackground(Color.pink);
+		b9.setForeground(Color.black);
+		b10.setBackground(Color.yellow);
+		b10.setForeground(Color.black);
+		b11.setBackground(Color.blue);
+		b11.setForeground(Color.black);
+		b12.setBackground(Color.pink);
+		b12.setForeground(Color.black);
+		b13.setBackground(Color.pink);
+		b13.setForeground(Color.black);
+		b14.setBackground(Color.pink);
+		b14.setForeground(Color.black);
+		b15.setBackground(Color.pink);
+		b15.setForeground(Color.black);
+		b16.setBackground(Color.pink);
+		b16.setForeground(Color.black);
+
+		next.setBackground(Color.pink);
+		next.setForeground(Color.red);
+		setSize(300, 350);
+		this.setLocationRelativeTo(null);
+
+		this.setResizable(false);
+	
+	this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setLayout(null);
+		setVisible(true);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}// end of constructor
+
+	public void actionPerformed(ActionEvent e) {
+
+		
+			
+		if (e.getSource() == next) {
+			String s = b4.getLabel();
+			b4.setLabel(b9.getLabel());
+			b9.setLabel(s);
+			s = b1.getLabel();
+			b1.setLabel(b5.getLabel());
+			b5.setLabel(s);
+			s = b2.getLabel();
+			b2.setLabel(b7.getLabel());
+			b7.setLabel(s);
+		}
+		if (e.getSource() == b1) {
+			String s = b1.getLabel();
+			if (b2.getLabel().equals(" ")) {
+				b2.setLabel(s);
+				b1.setLabel(" ");
+			} else if (b5.getLabel().equals(" ")) {
+				b5.setLabel(s);
+				b1.setLabel(" ");
+			}
+		}// end of if
+
+		if (e.getSource() == b3) {
+			String s = b3.getLabel();
+			if (b2.getLabel().equals(" ")) {
+				b2.setLabel(s);
+				b3.setLabel(" ");
+			} else if (b4.getLabel().equals(" ")) {
+				b4.setLabel(s);
+				b3.setLabel(" ");
+			} else if (b7.getLabel().equals(" ")) {
+				b7.setLabel(s);
+				b3.setLabel(" ");
+			}
+		}// end of if
+
+		if (e.getSource() == b2) {
+			String s = b2.getLabel();
+			if (b1.getLabel().equals(" ")) {
+				b1.setLabel(s);
+				b2.setLabel(" ");
+			} else if (b3.getLabel().equals(" ")) {
+				b3.setLabel(s);
+				b2.setLabel(" ");
+			} else if (b6.getLabel().equals(" ")) {
+				b6.setLabel(s);
+				b2.setLabel(" ");
+			}
+		}// end of if
+
+		if (e.getSource() == b4) {
+			String s = b4.getLabel();
+			if (b3.getLabel().equals(" ")) {
+				b3.setLabel(s);
+				b4.setLabel(" ");
+			} else if (b8.getLabel().equals(" ")) {
+				b8.setLabel(s);
+				b4.setLabel(" ");
+			}
+		}// end of if
+
+		if (e.getSource() == b5) {
+			String s = b5.getLabel();
+			if (b1.getLabel().equals(" ")) {
+				b1.setLabel(s);
+				b5.setLabel(" ");
+			} else if (b6.getLabel().equals(" ")) {
+				b6.setLabel(s);
+				b5.setLabel(" ");
+			} else if (b9.getLabel().equals(" ")) {
+				b9.setLabel(s);
+				b5.setLabel(" ");
+			}
+		}// end of if
+
+		if (e.getSource() == b6) {
+
+			String s = b6.getLabel();
+			if (b2.getLabel().equals(" ")) {
+				b2.setLabel(s);
+				b6.setLabel(" ");
+			} else if (b5.getLabel().equals(" ")) {
+				b5.setLabel(s);
+				b6.setLabel(" ");
+			} else if (b7.getLabel().equals(" ")) {
+				b7.setLabel(s);
+				b6.setLabel(" ");
+			} else if (b10.getLabel().equals(" ")) {
+				b10.setLabel(s);
+				b6.setLabel(" ");
+			}
+
+		}// end of if
+
+		if (e.getSource() == b7) {
+			String s = b7.getLabel();
+			if (b3.getLabel().equals(" ")) {
+				b3.setLabel(s);
+				b7.setLabel(" ");
+			} else if (b6.getLabel().equals(" ")) {
+				b6.setLabel(s);
+				b7.setLabel(" ");
+			} else if (b8.getLabel().equals(" ")) {
+				b8.setLabel(s);
+				b7.setLabel(" ");
+			} else if (b11.getLabel().equals(" ")) {
+				b11.setLabel(s);
+				b3.setLabel(" ");
+			}
+
+		}
+
+		// end of if
+
+		if (e.getSource() == b8) {
+			String s = b8.getLabel();
+			if (b4.getLabel().equals(" ")) {
+				b4.setLabel(s);
+				b8.setLabel(" ");
+			} else if (b7.getLabel().equals(" ")) {
+				b7.setLabel(s);
+				b8.setLabel(" ");
+			} else if (b12.getLabel().equals(" ")) {
+				b12.setLabel(s);
+				b8.setLabel(" ");
+			}
+
+		}
+
+		if (e.getSource() == b9) {
+			String s = b9.getLabel();
+			if (b5.getLabel().equals(" ")) {
+				b5.setLabel(s);
+				b9.setLabel(" ");
+			} else if (b10.getLabel().equals(" ")) {
+				b10.setLabel(s);
+				b9.setLabel(" ");
+			} else if (b13.getLabel().equals(" ")) {
+				b13.setLabel(s);
+				b9.setLabel(" ");
+			}
+
+		}
+		if (e.getSource() == b10) {
+			String s = b10.getLabel();
+			if (b6.getLabel().equals(" ")) {
+				b6.setLabel(s);
+				b10.setLabel(" ");
+			} else if (b9.getLabel().equals(" ")) {
+				b9.setLabel(s);
+				b10.setLabel(" ");
+			} else if (b11.getLabel().equals(" ")) {
+				b11.setLabel(s);
+				b10.setLabel(" ");
+			} else if (b13.getLabel().equals(" ")) {
+				b13.setLabel(s);
+				b10.setLabel(" ");
+			}
+
+		}
+		if (e.getSource() == b11) {
+			String s = b11.getLabel();
+			if (b10.getLabel().equals(" ")) {
+				b10.setLabel(s);
+				b11.setLabel(" ");
+			} else if (b12.getLabel().equals(" ")) {
+				b12.setLabel(s);
+				b11.setLabel(" ");
+			} else if (b7.getLabel().equals(" ")) {
+				b7.setLabel(s);
+				b11.setLabel(" ");
+			} else if (b15.getLabel().equals(" ")) {
+				b15.setLabel(s);
+				b11.setLabel(" ");
+			}
+
+		}
+		if (e.getSource() == b12) {
+			String s = b12.getLabel();
+			if (b11.getLabel().equals(" ")) {
+				b11.setLabel(s);
+				b12.setLabel(" ");
+			} else if (b8.getLabel().equals(" ")) {
+				b8.setLabel(s);
+				b12.setLabel(" ");
+			} else if (b16.getLabel().equals(" ")) {
+				b16.setLabel(s);
+				b12.setLabel(" ");
+			}
+
+		}
+		if (e.getSource() == b13) {
+			String s = b13.getLabel();
+			if (b9.getLabel().equals(" ")) {
+				b9.setLabel(s);
+				b13.setLabel(" ");
+			} else if (b14.getLabel().equals(" ")) {
+				b14.setLabel(s);
+				b13.setLabel(" ");
+			}
+
+		}
+		if (e.getSource() == b14) {
+			String s = b14.getLabel();
+			if (b13.getLabel().equals(" ")) {
+				b13.setLabel(s);
+				b14.setLabel(" ");
+			} else if (b10.getLabel().equals(" ")) {
+				b10.setLabel(s);
+				b14.setLabel(" ");
+			} else if (b15.getLabel().equals(" ")) {
+				b15.setLabel(s);
+				b14.setLabel(" ");
+			}
+
+		}
+		if (e.getSource() == b15) {
+			String s = b15.getLabel();
+			if (b14.getLabel().equals(" ")) {
+				b14.setLabel(s);
+				b15.setLabel(" ");
+			} else if (b11.getLabel().equals(" ")) {
+				b11.setLabel(s);
+				b15.setLabel(" ");
+			} else if (b16.getLabel().equals(" ")) {
+				b16.setLabel(s);
+				b15.setLabel(" ");
+			}
+
+		}
+		if (e.getSource() == b16) {
+			String s = b16.getLabel();
+			if (b12.getLabel().equals(" ")) {
+				b12.setLabel(s);
+				b16.setLabel(" ");
+			} else if (b15.getLabel().equals(" ")) {
+				b15.setLabel(s);
+				b16.setLabel(" ");
+			}
+
+		}
+
+		if (b1.getLabel().equals("1") && b2.getLabel().equals("2")
+				&& b3.getLabel().equals("3") && b4.getLabel().equals("4")
+				&& b5.getLabel().equals("5") && b6.getLabel().equals("6")
+				&& b7.getLabel().equals("7") && b8.getLabel().equals("8")
+				&& b9.getLabel().equals("9 ") && b10.getLabel().equals("10")
+				&& b11.getLabel().equals("11") && b12.getLabel().equals("12")
+				&& b13.getLabel().equals("13") && b14.getLabel().equals("14")
+				&& b15.getLabel().equals("15") && b16.getLabel().equals(" ")) {
+			JOptionPane.showMessageDialog(Pazel.this,
+					" __________** You have won**_______ ");
+
+		}// end of if
+
+	}// end of actionPerformed
+
+	public static void main(String[] args) {
+		new Pazel();
+	}// end of main
+}
